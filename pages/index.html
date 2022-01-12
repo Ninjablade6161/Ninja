@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ninja</title>
+	<script src="https://kit.fontawesome.com/a79b3aec3d.js" crossorigin="anonymous">
+	</script>
+  <link rel="icon" type="image/png" sizes="32x32" href="https://searchthing.ninjablade.repl.co/imgs/favicon-32x32.png">
+
+  <style>
+
+  @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300&display=swap');
+
+body{
+  margin: 0;
+  color: white;
+  background: #111111;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 0;
+}
+
+html{
+  margin: 0;
+  height: 100%;
+  font-family: 'Heebo', sans-serif;
+}
+
+#nav{
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 15px;
+}
+
+#nav a{
+  animation: fadeIn 4s;
+  margin-right: 20px;
+  
+}
+
+#middle{
+  margin-top: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+#text{
+  display: inline-block;
+  font-size: 70px;
+  height: 80px;
+  color: white;
+  padding-bottom: 30px;
+  font-weight: 900;
+  white-space: x;
+  border-right: 2px solid white;
+  background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(210,233,255,1) 30%, rgba(210,249,255,1) 50%, rgba(210,233,255,1) 70%, rgba(255,255,255,1) 100%);
+  background-size: 200% auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 5s linear infinite,
+  blinkTextCursor 1s infinite normal,
+  fadeIn 2s;
+  text-shadow: 0 0 5px #e8f4f8;
+}
+
+#logo img{
+ animation: fadeIn 4s;
+ margin-right: 5px;
+ height: 80px;
+ width: 69px;
+}
+
+#barcontainer{
+  animation: fadeIn 4s;
+  text-align: center;
+  margin-top: 10px;
+  padding: 17px;
+  position: relative; 
+  padding-bottom: 20px;
+}
+
+#url{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 50px;
+  padding-left: 15px;
+  border-radius: 10px;
+  width: 900px;
+  border:3.5px solid #eee;
+  background: #111111;
+  color: white;
+  box-shadow: 0 0 4px white;
+  text-shadow: 0 5px 100px white;
+
+}
+
+
+#footer{
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+#search{
+  position: absolute;
+  top: 0;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 35px;
+}
+
+.toplink{
+  color: #ced6e0;
+  text-decoration: none;
+}
+
+.toplink :hover{
+  text-decoration: underline;
+}
+
+#github-logo{
+    color: white;
+    text-decoration: none;
+    font-size: 3em;
+    position: relative;
+    background: #2f3640;
+    text-align: center;
+    padding: 12px;
+    border-radius: 10px;
+    animation: fadeIn 2s;
+}
+
+#github-logo{
+  transition: .5s;
+  text-shadow: 0 0 3px white;
+}
+
+#github-logo:hover{
+    background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(154,0,255,1) 100%);
+    transition: .5s;
+    
+}
+
+.active{
+  color: gray;
+}
+
+#nav a{
+  text-shadow: 0 0 10px white;
+  transition: 0.5s;
+}
+
+#nav a:hover{
+  font-size: 21px;
+  color: #4cd137;
+  text-shadow: 0 0 10px #4cd137;
+}
+
+#go{
+  color: white;
+  text-shadow: 0 0 5px white;
+}
+
+/*This is for A warning Label */
+#content-box{
+  color: red;
+  display: flex;
+  text-shadow: 0 0 5px red;
+  margin: 0;
+  margin-top: 10px;
+  justify-content: center;
+  background: #2d3436;
+  padding: 20px;
+  animation: fadeIn 5s;
+  transition: .5s;
+}
+/*This is for A warning Label */
+
+@keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:1;}
+}
+
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(255,255,255,.75);}
+  to{border-right-color: transparent;}
+}
+
+  @keyframes shine {
+    to {
+      background-position: 200% center;
+    }
+  }
+
+  @keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+  </style>
+</head>
+
+<body>
+
+	<div id="nav">
+		<a class="toplink" href="index.html" class="active">Home</a>
+  	<a class="toplink" href="https://404page.ninjablade.repl.co/" class="active">Tab Cloak</a>
+		<a class="toplink" href="https://404page.ninjablade.repl.co/" class="active">Games</a>
+		<a class="toplink" href="https://404page.ninjablade.repl.co/" class="active">About</a>
+    
+	</div>
+
+<!--This is the red Text -->
+  <p id="content-box">Only The Homepage Currently Works Right Now, But Progress Is Still Being Made.</p>
+<!--This is the red Text -->
+
+	<div id="middle">
+		<div id="logo">
+			<img src="https://searchthing.ninjablade.repl.co/imgs/logo.png">
+      </div>
+  <div id="text">
+inja
+    </div>
+    <!--Might Have To Change Input Method -->
+<div id="barcontainer">
+
+
+  <div id="search">
+
+<a class="fa fa-search" id="go" type="submit"></a>
+
+    </div>
+<input id="url" name="url" placeholder="example.com" class="url">
+</input>
+
+
+</div>
+
+
+  </div>
+
+
+  <div id="footer">
+
+<div id="footer-content">
+
+<a href="https://404page.ninjablade.repl.co/" class="fab fa-github-square" id="github-logo"></a>    
+
+</div>
+
+  </div>
+
+
+
+<script>
+function xor(str) {
+		return encodeURIComponent(str.toString().split('').map((char, ind) => ind % 2 ? String.fromCharCode(char.charCodeAt() ^ 2) : char).join(''));
+	}
+			
+	document.getElementById("go").onclick = function() {
+				var value = document.getElementById("url").value;
+				if (value) window.location.href = "c/" + xor(/^(http:\/\/|https:\/\/)/i.test(value) ? value : "https://www." + value);
+			}			
+</script>
+
+
+
+
+
+  </body>
+</html>
