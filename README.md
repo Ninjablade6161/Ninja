@@ -8,5 +8,6 @@ $git clone https://github.com/Ninjablade6161/Ninja.git
 cd pages
 bash runner.sh
 ```
+You can find a working example of this site over here(https://ninja.ninjablade.repl.co/)
 
 
