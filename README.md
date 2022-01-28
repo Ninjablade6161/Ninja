@@ -5,8 +5,10 @@ A proxy site based on the Corrosion proxy. It's secure and it can be used to unb
 # Setup
 ``` bash
 $git clone https://github.com/Ninjablade6161/Ninja.git
+npm install
 cd pages
 bash runner.sh
 ```
+You can find a working example of this site over here(https://ninja.ninjablade.repl.co/)
 
 
