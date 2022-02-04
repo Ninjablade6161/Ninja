@@ -4,7 +4,7 @@
 	<title>Ninja</title>
 	<script src="https://kit.fontawesome.com/a79b3aec3d.js" crossorigin="anonymous">
 	</script>
-  <link rel="icon" type="image/png" sizes="32x32" href="https://searchthing.ninjablade.repl.co/imgs/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://ninjahosting.ninjablade.repl.co/imgHosting/favicon/ninjaicon.png">
 
   <style>
 
@@ -13,7 +13,9 @@
 body{
   margin: 0;
   color: white;
-  background: #111111;
+	background-size: 400% 400%;
+	animation: gradient 10s ease infinite;
+  background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(26,26,26,1) 100%);
   display: flex;
   flex-direction: column;
   height: 100%;
@@ -54,7 +56,6 @@ html{
   padding-bottom: 30px;
   font-weight: 900;
   white-space: x;
-  border-right: 2px solid white;
   background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(210,233,255,1) 30%, rgba(210,249,255,1) 50%, rgba(210,233,255,1) 70%, rgba(255,255,255,1) 100%);
   background-size: 200% auto;
   background-clip: text;
@@ -96,7 +97,6 @@ html{
   text-shadow: 0 5px 100px white;
 
 }
-
 
 #footer{
   text-align: center;
@@ -155,7 +155,7 @@ html{
 }
 
 #nav a:hover{
-  font-size: 21px;
+  font-size: 20px;
   color: #4cd137;
   text-shadow: 0 0 10px #4cd137;
 }
@@ -185,16 +185,27 @@ html{
   box-shadow: 0 0 5px #4cd137;
   text-shadow: 0 0 5px #4cd137;
 }
-/*This is for A warning Label */
+
+.made{
+  animation: fadeIn 8s;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
 
 @keyframes fadeIn {
   0% {opacity:0;}
   100% {opacity:1;}
-}
-
-@keyframes blinkTextCursor{
-  from{border-right-color: rgba(255,255,255,.75);}
-  to{border-right-color: transparent;}
 }
 
   @keyframes shine {
@@ -222,24 +233,19 @@ html{
 
 	<div id="nav">
 		<a class="toplink" href="index.html" class="active">Home</a>
-  	<a class="toplink" href="https://404page.ninjablade.repl.co/" class="active">Tab Cloak</a>
 		<a class="toplink" href="https://404page.ninjablade.repl.co/" class="active">Games</a>
 		<a class="toplink" href="https://404page.ninjablade.repl.co/" class="active">About</a>
     
 	</div>
 
-<!--This is the red Text -->
-  <p id="content-box">You can't legally use this website without downloading more ram.This website needs a lot of ram to run.</p>
-<!--This is the red Text -->
 
 	<div id="middle">
 		<div id="logo">
-			<img src="https://searchthing.ninjablade.repl.co/imgs/logo.png">
+			<img src="https://ninjahosting.ninjablade.repl.co/ninjablade/logo.png">
       </div>
   <div id="text">
 inja
     </div>
-    <!--Might Have To Change Input Method -->
 <div id="barcontainer">
 
 
@@ -262,7 +268,8 @@ inja
 
 <div id="footer-content">
 
-<a href="https://github.com/Ninjablade6161/Ninja.git" class="fab fa-github-square" id="github-logo"></a>    
+<p class="made">Made By Ninjablade</p> 
+
 
 </div>
 
