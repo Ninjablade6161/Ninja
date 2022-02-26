@@ -1,0 +1,23 @@
+User-agent: Googlebot
+Disallow: /
+Disallow: /c/hvtrs8%2F-dksaopd%2Ccmm-/
+
+User-agent: Bingbot
+Disallow: /
+Disallow: /c/hvtrs8%2F-dksaopd%2Ccmm-/
+
+User-agent: Slurp
+Disallow: /
+Disallow: /c/hvtrs8%2F-dksaopd%2Ccmm-/
+
+User-agent: DuckDuckBot
+Disallow: /
+Disallow: /c/hvtrs8%2F-dksaopd%2Ccmm-/
+
+User-agent: Baiduspider
+Disallow: /
+Disallow: /c/hvtrs8%2F-dksaopd%2Ccmm-/
+
+User-agent: YandexBot
+Disallow: /
+Disallow: /c/hvtrs8%2F-dksaopd%2Ccmm-/

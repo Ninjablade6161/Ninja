@@ -1,2 +1,2 @@
 language = "nodejs"
-run = "bash runner.sh"
+run = "bash runner.sh"  

@@ -10,22 +10,41 @@
 
   @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300&display=swap');
 
+:root{
+  --bg-clr: #2f3640;
+  --bg-clr-light: #f5f6fa;
+  --text: white;
+  --text-light: black;
+  --gradient-clr-one: #d2e9ff;
+  --gradient-clr-one-light: #f5f6fa;
+  --gradient-clr-two:  #d2f9ff;
+  --gradient-clr-two-light: #101414;
+}
+
+.darkmode{
+  --bg-clr: #f5f6fa;
+  --text: black;
+  --gradient-clr-one: #f5f6fa;
+  --gradient-clr-two: #101414;
+  --text-shadow: #2f3640;
+}
+
+html{ 
+  margin: 0;
+  height: 100%;
+  font-family: 'Heebo', sans-serif;
+}
+    
 body{
   margin: 0;
-  color: white;
+  color: var(--text);
 	background-size: 400% 400%;
 	animation: gradient 10s ease infinite;
-  background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(26,26,26,1) 100%);
+  background: var(--bg-clr);
   display: flex;
   flex-direction: column;
   height: 100%;
   padding: 0;
-}
-
-html{
-  margin: 0;
-  height: 100%;
-  font-family: 'Heebo', sans-serif;
 }
 
 #nav{
@@ -37,9 +56,28 @@ html{
 #nav a{
   animation: fadeIn 4s;
   margin-right: 20px;
-  
+  text-shadow: 0 0 10px var(--text);
+  transition: 0.5s;
 }
 
+#nav a:hover{
+  color: #4cd137;
+  text-shadow: 0 0 10px var(--text-shadow);
+}
+
+.toplink{
+  color: var(--text);
+  text-decoration: none;
+}
+
+.toplink :hover{
+  text-decoration: underline;
+}
+
+#dark-mode-toggle:hover{
+    cursor: pointer;
+}    
+    
 #middle{
   margin-top: 0px;
   display: flex;
@@ -48,15 +86,22 @@ html{
   flex-grow: 1;
 }
 
+#logo img{
+ animation: fadeIn 4s;
+ margin-right: 5px;
+ height: 80px;
+ width: 69px;
+}
+    
 #text{
   display: inline-block;
   font-size: 70px;
   height: 80px;
-  color: white;
+  color: var(--text);
   padding-bottom: 30px;
   font-weight: 900;
-  white-space: x;
-  background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(210,233,255,1) 30%, rgba(210,249,255,1) 50%, rgba(210,233,255,1) 70%, rgba(255,255,255,1) 100%);
+  var(--text)-space: x;
+  background: linear-gradient(90deg, var(--text) 0%, var(--gradient-clr-one) 30%, rgba(210,249,255,1) 50%, var(--gradient-clr-one) 70%, var(--text) 100%);
   background-size: 200% auto;
   background-clip: text;
   -webkit-background-clip: text;
@@ -67,39 +112,12 @@ html{
   text-shadow: 0 0 5px #e8f4f8;
 }
 
-#logo img{
- animation: fadeIn 4s;
- margin-right: 5px;
- height: 80px;
- width: 69px;
-}
-
 #barcontainer{
   animation: fadeIn 4s;
   text-align: center;
   margin-top: 10px;
   padding: 17px;
   position: relative; 
-  padding-bottom: 20px;
-}
-
-#url{
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-right: 50px;
-  padding-left: 15px;
-  border-radius: 10px;
-  width: 900px;
-  border:3.5px solid #eee;
-  background: #111111;
-  color: white;
-  box-shadow: 0 0 4px white;
-  text-shadow: 0 5px 100px white;
-
-}
-
-#footer{
-  text-align: center;
   padding-bottom: 20px;
 }
 
@@ -112,78 +130,29 @@ html{
   align-items: center;
   right: 35px;
 }
-
-.toplink{
-  color: #ced6e0;
-  text-decoration: none;
-}
-
-.toplink :hover{
-  text-decoration: underline;
-}
-
-#github-logo{
-    color: white;
-    text-decoration: none;
-    font-size: 3em;
-    position: relative;
-    background: #2f3640;
-    text-align: center;
-    padding: 12px;
-    border-radius: 10px;
-    animation: fadeIn 2s;
-}
-
-#github-logo{
-  transition: .5s;
-  text-shadow: 0 0 3px white;
-}
-
-#github-logo:hover{
-    background: linear-gradient(90deg, rgba(255,0,0,1) 0%, rgba(154,0,255,1) 100%);
-    transition: .5s;
     
-}
-
-.active{
-  color: gray;
-}
-
-#nav a{
-  text-shadow: 0 0 10px white;
-  transition: 0.5s;
-}
-
-#nav a:hover{
-  font-size: 20px;
-  color: #4cd137;
-  text-shadow: 0 0 10px #4cd137;
+#url{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 50px;
+  padding-left: 15px;
+  border-radius: 10px;
+  width: 900px;
+  border:3.5px solid var(--text);
+  background: var(--bg-clr);
+  color: var(--text);
+  box-shadow: 0 0 4px var(--text);
+  text-shadow: 0 5px 100px var(--text);
 }
 
 #go{
-  color: white;
-  text-shadow: 0 0 5px white;
+  color: var(--text);
+  text-shadow: 0 0 5px var(--text);
 }
 
-/*This is for A warning Label */
-#content-box{
-  color: red;
-  display: flex;
-  text-shadow: 0 0 5px red;
-  margin: 0;
-  margin-top: 10px;
-  justify-content: center;
-  background: #2d3436;
-  padding: 20px;
-  animation: fadeIn 5s;
-  transition: .5s;
-}
-
-#content-box:hover{
-  font-size: 21px;
-  color: #4cd137;
-  box-shadow: 0 0 5px #4cd137;
-  text-shadow: 0 0 5px #4cd137;
+#footer{
+  text-align: center;
+  padding-bottom: 20px;
 }
 
 .made{
@@ -214,27 +183,19 @@ html{
     }
   }
 
-  @keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-}
-
   </style>
 </head>
+
+
 
 <body>
 
 	<div id="nav">
 		<a class="toplink" href="index.html" class="active">Home</a>
-		<a class="toplink" href="https://404page.ninjablade.repl.co/" class="active">Games</a>
+		<a class="toplink" href="https://games.ninjablade.repl.co/" class="active">Games</a>
 		<a class="toplink" href="https://404page.ninjablade.repl.co/" class="active">About</a>
+
+    		<a class="toplink" id="dark-mode-toggle" class="dark-mode-toggle">Dark Mode</a>
     
 	</div>
 
@@ -248,15 +209,18 @@ inja
     </div>
 <div id="barcontainer">
 
-
+<form id="searcher">
   <div id="search">
 
 <a class="fa fa-search" id="go" type="submit"></a>
 
+
+
+
     </div>
 <input id="url" name="url" placeholder="example.com" class="url">
 </input>
-
+</form>
 
 </div>
 
@@ -268,7 +232,7 @@ inja
 
 <div id="footer-content">
 
-<p class="made">Made By Ninjablade</p> 
+<p class="made">Made By Ninjablade 2022</p> 
 
 
 </div>
@@ -281,14 +245,57 @@ inja
 function xor(str) {
 		return encodeURIComponent(str.toString().split('').map((char, ind) => ind % 2 ? String.fromCharCode(char.charCodeAt() ^ 2) : char).join(''));
 	}
-			
+	var form = document.getElementById("searcher")
+  form.onsubmit = 
+    function() {
+				var value = document.getElementById("url").value;
+				if (value) window.location.href = "c/" + xor(/^(http:\/\/|https:\/\/)/i.test(value) ? value : "https://www." + value);
+			}			
+
+  
 	document.getElementById("go").onclick = function() {
 				var value = document.getElementById("url").value;
 				if (value) window.location.href = "c/" + xor(/^(http:\/\/|https:\/\/)/i.test(value) ? value : "https://www." + value);
 			}			
 </script>
 
+<!-- Dark Mode -->
 
+<script>
+
+let darkMode = localStorage.getItem('darkMode'); 
+
+const darkModeToggle = document.querySelector('#dark-mode-toggle');
+
+const enableDarkMode = () => {
+  document.body.classList.add('darkmode');
+  darkModeToggle.innerText = "Light Mode";
+  localStorage.setItem('darkMode', 'enabled');
+}
+
+const disableDarkMode = () => {
+  document.body.classList.remove('darkmode');
+  darkModeToggle.innerText = "Dark Mode";
+  localStorage.setItem('darkMode', null);
+}
+ 
+if (darkMode === 'enabled') {
+  enableDarkMode();
+}
+
+darkModeToggle.addEventListener('click', () => {
+  darkMode = localStorage.getItem('darkMode'); 
+  
+  if (darkMode !== 'enabled') {
+    enableDarkMode();
+  } else {  
+    disableDarkMode(); 
+  }
+});
+
+  
+  
+</script>
 
 
 
