@@ -9,5 +9,6 @@ npm install
 bash runner.sh
 ```
 You can find a working example of this site over here(https://ninja.ninjablade.repl.co/)
+https://games.ninjablade.repl.co/
 
 
